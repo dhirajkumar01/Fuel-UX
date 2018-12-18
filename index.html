@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fuel UX Basic Template (Globals)</title>
+
+    <link href="//www.fuelcdn.com/fuelux/2.6.1/css/fuelux.min.css" rel="stylesheet" type="text/css">
+    <link href="//www.fuelcdn.com/fuelux/2.6.1/css/fuelux-responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="fuelux">
+        <table id="MyGrid" class="table table-bordered datagrid">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="datagrid-header-title"></span
+                        <div class="datagrid-header-left row">
+                            <div class="input-append search datagrid-search col-md-6">
+                                <input type="text" class="input-medium" placeholder="Search">
+                                <button type="button" class="btn"><i class="icon-search"></i></button>
+                            </div>
+                            <div class="col-md-3">
+                                <form>
+                                    <div class="multiselect" >
+                                        <div class="selectBox" onclick="showCheckboxes()">
+                                            <select class="selectItem" >
+                                                <option>Select an option</option>
+                                            </select>
+                                            <div class="overSelect"></div>
+                                        </div>
+                                        <div id="checkboxes" >
+                                            <label for="zero">
+                                                <input type="checkbox" checked="checked" id="zero" value="0" name="toponymName" />name
+                                            </label>
+                                            <label for="one">
+                                                <input type="checkbox" checked="checked" id="one" value="1" name="countrycode" />country
+                                            </label>
+                                            <label for="two">
+                                                <input type="checkbox" checked="checked" id="two" value="2" name="population" />Population
+                                            </label>
+                                            <label for="three">
+                                                <input type="checkbox" checked="checked" id="three" value="3" name="fcodeName" />Type
+                                            </label>
+                                            <label for="four">
+                                                <input type="checkbox" checked="checked" id="four" value="4" name="fcl" />fcl
+                                            </label>
+                                            <label for="five">
+                                                <input type="checkbox" checked="checked" id="five" value="5" name="fclName" />fclName
+                                            </label>
+                                            <label for="six">
+                                                <input type="checkbox" checked="checked" id="six" value="6" name="lng" />lng
+                                            </label>
+                                            <label for="seven">
+                                                <input type="checkbox" checked="checked" id="seven" value="7" name="fcode" />fcode
+                                            </label>
+                                            <label for="eight">
+                                                <input type="checkbox" checked="checked" id="eight" value="8" name="geonameId" />geonameId
+                                            </label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                        <div class="datagrid-header-right" >
+                            <div class="select filter" data-resize="auto">
+                                <button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
+                                    <span class="dropdown-label"></span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li data-value="all" data-selected="true"><a href="#">All</a></li>
+                                    <li data-value="lt5m"><a href="#">Population < 5M</a></li>
+                                    <li data-value="gte5m"><a href="#">Population >= 5M</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>
+                        <div class="datagrid-footer-left" style="display:none;">
+                            <div class="grid-controls">
+                                <span>
+                                    <span class="grid-start"></span> -
+                                    <span class="grid-end"></span> of
+                                    <span class="grid-count"></span>
+                                </span>
+                                <div class="select grid-pagesize" data-resize="auto">
+                                    <button type="button" data-toggle="dropdown" class="btn dropdown-toggle">
+                                        <span class="dropdown-label"></span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li data-value="5" data-selected="true"><a href="#">5</a></li>
+                                        <li data-value="10"><a href="#">10</a></li>
+                                        <li data-value="20"><a href="#">20</a></li>
+                                        <li data-value="50"><a href="#">50</a></li>
+                                        <li data-value="100"><a href="#">100</a></li>
+                                    </ul>
+                                </div>
+                                <span>Per Page</span>
+                            </div>
+                        </div>
+                        <div class="datagrid-footer-right" style="display:none;">
+                            <div class="grid-pager">
+                                <button type="button" class="btn grid-prevpage"><i class="icon-chevron-left"></i></button>
+                                <span>Page</span>
+
+                                <div class="input-append dropdown combobox">
+                                    <input class="span1" type="text">
+                                    <button type="button" class="btn" data-toggle="dropdown"><i class="caret"></i></button>
+                                    <ul class="dropdown-menu"></ul>
+                                </div>
+                                <span>of <span class="grid-pages"></span></span>
+                                <button type="button" class="btn grid-nextpage"><i class="icon-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="http://www.fuelcdn.com/fuelux/2.6.1/loader.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
+        <script type="text/javascript" src="datasource.js"></script>
+        <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+    </html>
